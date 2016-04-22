@@ -19,7 +19,7 @@ mkdir -p src/test/java
 
 cd src/main/scala
 
-echo "object Hello extends Trait { println(\"hello world\") }" >> Hello.scala
+echo "object Hello extends App { println(\"hello world\") }" >> Hello.scala
 
 cd ${workingdir}
 
