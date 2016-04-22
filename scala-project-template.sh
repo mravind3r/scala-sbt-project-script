@@ -1,11 +1,11 @@
 
-project-name=$1
+projectname=$1
 
-git clone https://github.com/mravind3r/scala-sbt-project-script.git $project-name
+git clone  https://github.com/mravind3r/sbt-template.git  ${projectname}
 
-cd $project-name
+cd ${projectname}
 
-working-dir=${pwd}
+workingdir=$(pwd)
 
 rm -rf .git
 
@@ -19,10 +19,10 @@ mkdir -p src/test/java
 
 cd src/main/scala
 
-echo "object Hello extends Trait { println("hello world") } >> Hello.scala
+echo "object Hello extends Trait { println(\"hello world\") }" >> Hello.scala
 
-cd working-dir
+cd ${workingdir}
 
-
+sbt run
 
 
